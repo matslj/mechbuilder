@@ -1,0 +1,97 @@
+{
+    "weapons" : [
+        {
+            "short-name" : "hmg",
+            "long-name"  : "Heavy machine gun",
+            "structure-points" : 1
+        },
+        {
+            "short-name" : "hmg-tl",
+            "long-name"  : "Twin linked heavy machine gun",
+            "structure-points" : 2
+        },
+        {
+            "short-name" : "lmg",
+            "long-name"  : "Light machine gun",
+            "structure-points" : 1
+        },
+        {
+            "short-name" : "lmg-tl",
+            "long-name"  : "Twin linked light machine gun",
+            "structure-points" : 2
+        },
+        {
+            "short-name" : "flame",
+            "long-name"  : "Flame thrower",
+            "structure-points" : 1
+        },
+        {
+            "short-name" : "arifle",
+            "long-name"  : "Assault rifle",
+            "structure-points" : 0
+        },
+        {
+            "short-name" : "mcannon",
+            "long-name"  : "Medium cannon",
+            "structure-points" : 2
+        }
+    ],
+    "chassis" : [
+        {
+            "chassisSize": "small",
+            "crew": 1,
+            "speedClass": 2,
+            "baseChassisCost": 1,
+            "increasedSpeedClassCost": 2,
+            "weaponHardPoints": 3,
+            "maxMediumWeapons": 1,
+            "maxHeavyWeapons": "",
+            "minArmorClass": "N",
+            "maxArmorClass": "M"
+        },
+        {
+            "chassisSize": "medium",
+            "crew": 2,
+            "speedClass": 3,
+            "baseChassisCost": 1,
+            "increasedSpeedClassCost": 2,
+            "weaponHardPoints": 4,
+            "maxMediumWeapons": 1,
+            "maxHeavyWeapons": "H",
+            "minArmorClass": "VL",
+            "maxArmorClass": "H"
+        },
+        {
+            "chassisSize": "large",
+            "crew": 3,
+            "speedClass": 3,
+            "baseChassisCost": 2,
+            "increasedSpeedClassCost": 3,
+            "weaponHardPoints": 5,
+            "maxMediumWeapons": 2,
+            "maxHeavyWeapons": ["H", "VH"],
+            "minArmorClass": "L",
+            "maxArmorClass": "VH"
+        },
+        {
+            "chassisSize": "titanic",
+            "crew": 4,
+            "speedClass": 3,
+            "baseChassisCost": 4,
+            "increasedSpeedClassCost": 3,
+            "weaponHardPoints": 6,
+            "maxMediumWeapons": 2,
+            "maxHeavyWeapons": ["H", "VH", "SH"],
+            "minArmorClass": "L",
+            "maxArmorClass": "VH"
+        }
+    ],
+    "armor": {
+        "none": 0,
+        "veryLight": 1,
+        "light": 2,
+        "medium": 4,
+        "heavy": 8,
+        "veryHeavy": 12
+    }
+}

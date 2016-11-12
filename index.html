@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Mechbuilder</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+        <script type="text/javascript" src="js/mecha.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>Mechbuilder</h1>
+            </header>
+            <div id="screen-weapons" class="screen">
+                <div id="panel-init" class="panel">
+                    <div id="size">
+                        <h2>Select size</h2>
+                        <div class="small">
+                            <object data="mech_size.svg" type="image/svg+xml">
+                                <p>Alas, your browser does not support SVG.</p>
+                            </object>
+                        </div>
+                        <div class="medium">
+                            <object data="mech_size.svg" type="image/svg+xml">
+                                <p>Alas, your browser does not support SVG.</p>
+                            </object>
+                        </div>
+                        <div class="large">
+                            <object data="mech_size.svg" type="image/svg+xml">
+                                <p>Alas, your browser does not support SVG.</p>
+                            </object>
+                        </div>
+                        <div class="titanic">
+                            <object data="mech_size.svg" type="image/svg+xml">
+                                <p>Alas, your browser does not support SVG.</p>
+                            </object>
+                        </div>
+                    </div>
+                    <div id="initPanelChkBoxes">
+                        <table>
+                            <tr>
+                                <td><input id="germanyChkb" type="checkbox" name="germany" /></td>
+                                <td>Is it a german mech?</td>
+                            </tr>
+                            <tr>
+                                <td><input id="incSpeed" type="checkbox" name="incSpeed" /></td>
+                                <td>Increased speed?</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><select id="dd-armor">
+                        <option value="" SELECTED>- No armor -</option>
+                    </select></td>
+                            </tr>
+                        </table>
+                        <div class="squaredOne">
+	<input type="checkbox" value="None" id="squaredOne" name="check" />
+	<label for="squaredOne"></label>
+</div>
+                    </div>
+                    
+                </div>
+                <div id="panel-view" class="panel">
+                    <object id="mecha" data="mecha.svg" type="image/svg+xml">
+                        <p>Alas, your browser does not support SVG.</p>
+                    </object>
+                </div>
+                <div id="panel-detail" class="panel">
+                    <h3></h3>
+                    <select id="dd-weapon">
+                        <option value="" SELECTED>- No weapon -</option>
+                    </select>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,326 @@
+/* 
+    Created on : 2016-feb-19, 12:38:57
+    Author     : ldc-msl, Ldc
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;*/
+    font-size: 70%;
+    line-height: 1.3em;
+}
+
+#wrapper {
+}
+
+.screen {
+    margin: 10px;
+    display: none;
+}
+
+object {
+    box-shadow: 2px 2px 2px #ccc;
+    border: 1px solid black;
+}
+
+/*header {
+    background-color: gray;
+    padding: 10px 10px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}*/
+
+header h1 {
+    margin: 0; padding: 10px; border-bottom: 1px solid #000; background-color: #444; 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #777), color-stop(1, #111));
+    background-image: -webkit-linear-gradient(top, #777, #111);
+    background-image: -moz-linear-gradient(top, #777, #111);
+    background-image: -o-linear-gradient(top, #777, #111);
+    background-image: -ms-linear-gradient(top, #777, #111);
+    background-image: linear-gradient(to bottom, #777, #111);
+    font-weight: 300; color: #fff; text-shadow: 0 -1px 0 #000;
+}
+
+/* ---- Panels ---- */
+
+.panel {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#panel-init {
+    border: 1px solid black;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px #ccc;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#panel-init object {
+    box-shadow: none;
+    border: none;
+}
+
+#panel-init div#size div {
+    display: inline-block;
+}
+
+#panel-init .small {
+    width: 50px;
+    height: 50px;
+}
+
+#panel-init .medium {
+    width: 75px;
+    height: 75px;
+}
+
+#panel-init .large {
+    width: 100px;
+    height: 100px;
+}
+
+#panel-init .titanic {
+    width: 125px;
+    height: 125px;
+}
+
+#size h2 {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+#initPanelChkBoxes {
+    margin-top: 20px;
+    padding-top: 0.7em;
+}
+
+#initPanelChkBoxes table {
+    border-collapse: 0;
+    border: none;
+    font-size: 1.6em;
+    margin: 0 auto;
+}
+
+#initPanelChkBoxes table tr > td {
+    padding-bottom: 0.7em;
+}
+
+#initPanelChkBoxes table tr:last-child td:last-child {
+    text-align: center;
+}
+
+#panel-view {
+}
+
+#panel-detail {
+    border: 1px solid black;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px #ccc;
+    margin-left: 20px;
+    padding: 20px;
+    display: none;
+}
+
+#panel-detail h3 {
+    margin-top: 0;
+}
+
+/* ----- Overlay for dialogs ------ */
+
+.overlay-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000; /* high z-index */
+    background: #000; /* fallback */
+    background: rgba(0,0,0,0.75);
+    
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+.overlay-content {
+    /* display: none; */
+    background: #fff;
+    padding: 1%;
+    width: 40%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+    cursor: default;
+    z-index: 10001;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.9);
+    
+    color: red;
+}
+
+/* ---- General stuff ---- */
+div.clear {
+    clear: both;
+}
+
+/* --- Flag icons from flag-icon-css --- */
+
+.flag-wrapper {
+  width: 10%; /* 100%; */
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 0 2px black;
+  overflow: hidden;
+  margin-bottom: 0; /* 20px; */
+}
+.flag-wrapper:after {
+  padding-top: 75%;
+  /* ratio */
+  display: block;
+  content: '';
+}
+.flag-wrapper .flag {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.no-wrap {
+  white-space: nowrap;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.all-flags .flag-icon-background {
+  cursor: pointer;
+}
+
+.flag-icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.flag-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.33333333em;
+  line-height: 1em;
+}
+
+.flag-icon:before {
+  content: "\00a0";
+}
+.flag-icon.flag-icon-squared {
+  width: 1em;
+}
+
+.flag-icon-de {
+  background-image: url(../flags/4x3/de.svg);
+}
+.flag-icon-de.flag-icon-squared {
+  background-image: url(../flags/1x1/de.svg);
+}
+
+/* --- Checkbox styling --- */
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+/* SQUARED ONE */
+.squaredOne {
+	width: 28px;
+	height: 28px;
+	background: #fcfff4;
+
+	background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+	margin: 20px auto;
+	-webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	position: relative;
+}
+
+.squaredOne label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 4px;
+	top: 4px;
+
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+
+	background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -o-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
+	background: linear-gradient(top, #222 0%, #45484d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+}
+
+.squaredOne label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: #00bf00;
+
+	background: -webkit-linear-gradient(top, #00bf00 0%, #009400 100%);
+	background: -moz-linear-gradient(top, #00bf00 0%, #009400 100%);
+	background: -o-linear-gradient(top, #00bf00 0%, #009400 100%);
+	background: -ms-linear-gradient(top, #00bf00 0%, #009400 100%);
+	background: linear-gradient(top, #00bf00 0%, #009400 100%);
+
+	top: 2px;
+	left: 2px;
+
+	-webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.squaredOne label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+
+.squaredOne input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
